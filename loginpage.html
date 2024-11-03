@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login to Beauty market</title>
+  <link rel="stylesheet" href="loginstyle.css">
+</head>
+<script>
+  function myFunction(){
+    var username=document.myform.uname.value;
+            var password=document.myform.pwd.value;
+    
+  if(username==null || username==""){
+                alert("UserName cannot be blank");
+                return false;
+            }
+            else if(password.length<6){
+                alert("Password should be atleast 6 characters");
+                return false;
+            }
+          }
+</script>
+<body>
+    <h1>LOGIN HERE..</h1>
+    <form name="myform" action="Home.html" onsubmit="return myFunction()">
+      <div id="style">
+        <h3>SIGN IN!</h3>
+        User Name:<br><input type="text" name="uname" placeholder="User Name"><br>
+        Password :<br><input type="password" name="pwd" placeholder="Password"><br>
+        <button><a href="Home.html"><input id="sub" type="SUBMIT"></a></button>
+    </div>
+    </form>
+</body>
+</html>
